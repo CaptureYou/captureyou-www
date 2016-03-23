@@ -1,0 +1,366 @@
+html {
+    height: 100%;
+}
+body {
+    width: 100%;
+    font-family: 'Open Sans';
+    overflow-x:hidden;
+    margin: 0;
+}
+
+/**********************
+MENU
+**********************/
+
+#menu{
+    width:100%;
+    text-align:center;
+    height: 75px;
+    top: 10px;
+}
+
+#menu ul{
+    list-style:none;
+    position: absolute;
+    width: 100%;
+    margin-left: 32%;
+}
+
+#menu ul li{
+    display:inline-block;
+    padding: 10px 20px;
+    margin: 0px 1%;
+    color:#333;
+    border-radius: 8px;
+    -moz-border-radius:8px;
+    -webkit-border-radius: 8px;
+    cursor: pointer;
+}
+
+#menu ul li:hover {
+    background-color: #4B4343;
+    color: #fff;
+}
+
+#menu img {
+  height: 50px;
+  margin: 12px 0 0 2%;
+  float: left;
+}
+
+/***********************
+Classes
+***********************/
+
+.gap {
+  margin-top: 1em;
+  width: 100%;
+  display: block;
+}
+
+.header {
+  margin: 3%;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.subhead {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.left {
+  margin-left: 3%;
+}
+
+/*******************
+SPLASH LAYER
+********************/
+
+#splashLayer {
+  max-height: 550px;
+  height: 550px;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  top: 75px;
+  display: block;
+  background-image: url('images/splash.jpg');
+  background-position: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 550px;
+  background-size: cover;
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
+
+.content {
+  position: relative;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  width: 100%;
+  height: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content h1 {
+  font-family: 'Open Sans';
+  font-size: 75px;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 103px;
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.50);
+}
+
+.button {
+  /* Rectangle 26: */
+  background: rgba(75,67,67,0.65);
+  display: inline-block;
+  text-align: center;
+  padding: 10px 20px;
+  color: #fff;
+  width: 10%;
+  margin: 0 3%;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+  border-color: #565a5c;
+  border-bottom-color: #383b3c;
+  cursor: pointer;
+}
+.content .button:hover {
+  background: rgba(255,255,255,0.65);
+  color: #333;
+}
+
+#buttonGrp1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#searchBar{
+  width: 100%;
+  padding-bottom: 10%;
+  padding-top: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  float: left;
+}
+
+#searchBar .rect{
+    /* Rectangle 25: */
+  background: #FFFFFF;
+  border: 1px solid #979797;
+  border-radius: 8px;
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+}
+#searchBar .line {
+  /* Line: */
+  border: 1px solid #979797;
+}
+
+#searchBar .placeholder {
+  position: relative;
+  display: inline-block;
+}
+
+#searchBar .element, #searchForm .searchButton {
+  float: left;
+  padding-bottom: 0;
+  padding-top: 0;
+  vertical-align: middle;
+  border-left: 1px solid #979797;
+  width: auto;
+}
+
+#searchBar .exclude {
+  border-left: 0!important;
+}
+
+#searchForm input, #searchForm select {
+  display: block;
+  height: 40px;
+  font-size: 14px;
+  padding: 8px 10px;
+  width: auto;
+  box-sizing: border-box;
+  border: 0px;
+  -webkit-input-placeholder: #999989;
+}
+
+#searchForm select {
+  width: 350px;
+}
+
+#searchForm select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 40px;
+  background-color: #fff!important;
+  font-family: 'Open Sans';
+  border-radius: 7px 0 0 7px;
+  color: #999989;
+}
+
+
+#searchForm .searchButton {
+  background: #4B4343;
+  border-radius: 0px 7px 7px 0px;
+  border-color: #4B4343;
+  border-bottom-color: #4B4343;
+  color: #fff;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 0 0 0;
+  height: 40px;
+  cursor: pointer;
+  width: auto;
+  padding: 7px 27px;
+  font-size: 16px;
+  line-height: 1.43;
+  -webkit-user-select: none;
+  white-space: nowrap;
+  -webkit-appearance: button;
+  -webkit-font-smoothing: antialiased;
+  border-style:none;
+}
+
+#searchForm .selectWrapper {
+  display: block;
+  height: 40px;
+  font-size: 14px;
+  position: relative;
+  vertical-align: bottom;
+}
+#searchForm .selectWrapper:before {
+  content: '\25bc';
+  position: absolute;
+  pointer-events: none;
+  color: #8D8D8D;
+  top: 0px;
+  bottom: 0px;
+  padding-top: 0.9em;
+  line-height: 1.2;
+  right: 0;
+  width: 3em;
+  text-align: center;
+  transform: scale(0.84, 0.42);
+  -webkit-transform: scale(0.84, 0.42);
+}
+
+/**************************
+BOTTOM LAYER
+**************************/
+
+#bottomLayer {
+  width: 100%;
+  text-align: center;
+}
+#bottomLayer h1 {
+/* Why join the Capture:*/
+  font-size: 35px;
+  color: #151212;
+    text-align: center;
+  line-height: 57px;
+}
+
+#bottomLayer #featureGroup {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+#bottomLayer .feature {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  width: 33.3%;
+}
+
+#bottomLayer .heading {
+  color: #8D8D8D;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+#bottomLayer .subText {
+  font-size: 12px;
+  margin: 5px 10px;
+  width: auto;
+}
+
+#bottomLayer .button {
+  vertical-align: middle;
+  width: auto;
+  margin: 2%;
+
+}
+
+/***********************
+FOOTER
+***********************/
+
+#footer {
+  background-color: #4A4A4A;
+}
+
+#footer .menuOptions {
+  width: 100%;
+}
+
+#footer .menuOptions .section {
+  display: inline-block;
+  width: auto;
+  margin: auto 4%;
+  color: #fff;
+  vertical-align: top;
+}
+
+#footer .menuOptions .section ul {
+  list-style: none;
+  -webkit-padding-start: 0;
+}
+
+.section ul li {
+  line-height: 2.2em;
+}
+
+#footer .endLayer {
+  width: 93%;
+  padding: 20px 3%;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+#footer img  {
+  height: 50px;
+}
+
+#footer i {
+  margin: 10px 10px;
+}
+
+#footer .end {
+  max-height: 50px;
+  vertical-align: middle;
+}

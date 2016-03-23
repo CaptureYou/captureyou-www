@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>Capture You</title>
+  <link rel="stylesheet" href="static/assests/main.css">
+  <link href="http://fonts.googleapis.com/css?family=Raleway|Source Sans Pro|Open Sans|Roboto" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="static/assests/font-awesome-4.4.0/css/font-awesome.min.css">
+  <link rel="icon" href="static/assests/images/logo.png">
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 8]>
+  <link rel="stylesheet" href="stylesheets/ie.css">
+  <![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+<body>
+
+  <!-- MENU HEADER-->
+  <div id="menu">
+    <img src="static/assests/images/icon.png"  />
+    <ul>
+      <li>Help</li>
+      <a href="#openModal"><li>Signup</li></a>
+      <a href="#openModal"><li>Login</li></a>
+    </ul>
+  </div>
+  <!-- FIRST LAYER-->
+  <div class="gap"></div>
+  <div id="splashLayer">
+    <div class="background-image"></div>
+    <div class="content">
+      <h1>Let's CaptureYou</h1>
+      <div id="buttonGrp1">
+        <div class="button">Who are we?</div>
+        <div class="button">How do we work?</div>
+      </div>
+      <div class="gap"></div>
+      <div id="searchBar">
+        <div class="rect">
+          <form id="searchForm" method="get">
+            <label class="exclude element">
+              <div class="selectWrapper">
+                <select id="phtype" name="phtype">
+                  <option value="" disabled selected>I need someone for my....</option>
+                  <option value="graduation">Graduation/Senior Portrait</option>
+                  <option value="wedding">Wedding Ceremony</option>
+                  <option value="family">Family Photoshoot</option>
+                  <option value="sports">Sports Event/Competition</option>
+                </select>
+              </div>
+            </label>
+            <label class="placeholder small element">
+              <input class="" id="zip" name="zip" type="text" placeholder="Zip Code">
+            </label>
+            <label class="placeholder small element">
+              <input class="" id="date" name="date" type="text" onblur="(this.type='text')" onfocus="(this.type='date')" placeholder="Date">
+            </label>
+            <button id="submit_location" type="submit" class="searchButton">
+              <span>Search</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- BOTTOM LAYER-->
+  <div class="gap"></div>
+  <div id="bottomLayer">
+    <h1> Why join the CaptureFamily? </h1>
+    <div class="gap"></div>
+    <div id="featureGroup">
+      <div class="feature">
+        <i class="fa fa-desktop fa-5x"></i>
+        <div class="heading">EXTENSIVE PHOTOGRAPHER DATABASE</div>
+        <div class="subText">We work very hard to ensure that we include photographers across all ranges.</div>
+      </div>
+      <div class="feature">
+        <i class="fa fa-camera fa-5x"></i>
+        <div class="heading">INSTANT BOOKING STRUCTURE</div>
+        <div class="subText">Book a photographer online, hassle free with post-pay and secure payment.</div>
+      </div>
+      <div class="feature">
+        <i class="fa fa-bullhorn fa-5x"></i>
+        <div class="heading">MARKETING FOR PHOTOGRAPHERS</div>
+        <div class="subText">Quick way to connect with customers and get yourself found.</div>
+      </div>
+    </div>
+    <div class="button">Become a listed photographer</div>
+    <div class="gap"></div>
+    <!--h1> See what our customers are saying </h1-->
+  </div>
+  <!-- FOOTER-->
+  <div class="gap"></div>
+  <div id="footer">
+    <div class="menuOptions">
+      <div class="section">
+        <h3>About Us</h3>
+        <ul>
+          <li>About CaptureYou </li>
+          <li>Team </li>
+          <li>Advisors </li>
+          <li>Contact Us </li>
+          <li>Legal </li>
+        </ul>
+      </div>
+      <div class="section">
+        <h3>Discover</h3>
+        <ul>
+          <li>Blog </li>
+          <li>Photographer of the Week </li>
+          <li>Weekly Updates </li>
+        </ul>
+      </div>
+      <div class="section">
+        <h3>CaptureYou for Photographer</h3>
+        <ul>
+          <li>Benefits </li>
+          <li>Advertise</li>
+          <li>Photographer Sucess Stories</li>
+        </ul>
+      </div>
+    </div>
+    <div class="endLayer">
+      <div class="end"><img src="static/assests/images/logoWhite.png"  /></div>
+      <div class="end">
+        <i class="fa fa-linkedin-square fa-2x"></i>
+        <i class="fa fa-facebook-square fa-2x"></i>
+        <i class="fa fa-twitter-square fa-2x"></i>
+        <i class="fa fa-instagram fa-2x"></i>
+      </div>
+    </div>
+  </div>
+  <!-- LOGIN MODAL -->
+  <div id="openModal" class="modalDialog">
+    <div>
+      <a href="#close" title="Close" class="close"> <i class="fa fa-times-circle-o fa-2x"></i></a>
+      <h2>Login/Signup</h2>
+      <a href="/auth/facebook"><div id="login" class="facebook"><i class="fa fa-facebook-square"></i> Login with Facebook</div></a>
+      <!--div id="login" class="google"><i class="fa fa-google-plus-square"></i> Login with Google+</div>
+      <div id="login" class="twitter"><i class="fa fa-twitter-square"></i> Login with Twitter</div-->
+   </div>
+  </div>
+</body>
+</html>

@@ -1,8 +1,8 @@
 (function() {
   'use strict';
-  frontWWW.controller('homeCtrl', ['$scope', '$location', '$routeParams', 'suwemAdapter', '$log', homeCtrl]);
+  frontWWW.controller('homeCtrl', ['$scope', '$location', '$routeParams', 'captureYouAdapter', '$log', homeCtrl]);
 
-  function homeCtrl($scope, $location, $routeParams, suwemAdapter, $log){
+  function homeCtrl($scope, $location, $routeParams, captureYouAdapter, $log){
     var sack = {};
     async.series([
       reset_,
@@ -21,7 +21,7 @@
     }
 
     function getEvents_(next){
-      suwemAdapter.getEventsByUserId($scope._data.user.SlackId, function(err, events){
+      captureYouAdapter.getEventsByUserId($scope._data.user.SlackId, function(err, events){
         if(err)
           return next('Error getting events for ' + rootScope._data.user.userId + ' ' + err);
 

@@ -114,7 +114,7 @@ function initialize(){
 
   function authentication(req, res, next) {
     if (req.isAuthenticated() && req.user.tokens) {
-        res.cookie('accessToken', req.user.tokens[0]);
+        res.cookie('accessToken', req.user.tokens);
         return authorizeAccount(req, res);
     }
     return next();

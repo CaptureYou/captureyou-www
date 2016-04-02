@@ -32,9 +32,9 @@ frontWWW.config(['$routeProvider', '$locationProvider', '$httpProvider',
 ]);
 
 (function() {
-  frontWWW.run(['$rootScope', '$route', '$location', 'suwemAdapter', '$log',runApp]);
+  frontWWW.run(['$rootScope', '$route', '$location', 'captureYouAdapter', '$log',runApp]);
 
-  function runApp($rootScope, $route, $location, suwemAdapter, $log){
+  function runApp($rootScope, $route, $location, captureYouAdapter, $log){
     $rootScope._data = {};
     var sack = {};
     async.series([
@@ -52,7 +52,7 @@ frontWWW.config(['$routeProvider', '$locationProvider', '$httpProvider',
     });
 
     function getUserId_(next){
-      suwemAdapter.getUserId(function(err, userId){
+      captureYouAdapter.getUserId(function(err, userId){
         if(err)
           return next('Error getting User ID: ' + err);
 
@@ -65,7 +65,7 @@ frontWWW.config(['$routeProvider', '$locationProvider', '$httpProvider',
       if(!sack.userId){
         return next();
       }
-      suwemAdapter.getUserById(sack.userId, function(err, userData){
+      captureYouAdapter.getUserById(sack.userId, function(err, userData){
         if(err)
           return next('Error getting User ' + sack.userId + ' data: ' + err)
         sack.userData = userData[0];

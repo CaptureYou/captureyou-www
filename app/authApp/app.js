@@ -9,24 +9,10 @@ frontWWW.config(['$routeProvider', '$locationProvider', '$httpProvider',
       .when('/', {
         templateUrl: basePath + 'home/home.html',
         controller: 'homeCtrl'
-      })/*
-      .when('/events', {
-        templateUrl: basePath + 'events/index.html',
-        controller: 'eventsCtrl'
       })
-      .when('/events/newEvent', {
-        templateUrl: basePath + 'events/form.html',
-        controller: 'newEventCtrl'
-      })*/
       .otherwise({
         redirectTo: '/'
       });
-
-      /*
-      .when('/:user', {
-        templateUrl: basePath + ''
-      })
-      */
       $locationProvider.html5Mode(true);
   }
 ]);
@@ -46,8 +32,8 @@ frontWWW.config(['$routeProvider', '$locationProvider', '$httpProvider',
         $log.error(err);
 
       $rootScope._data.user = sack.userData;
-      $rootScope._data.user.firstName = sack.userData.fullName.split(" ")[0];
-      $rootScope._data.title = $rootScope._data.user.displayName + ' | SUW EM';
+      $rootScope._data.user.firstName = sack.userData.fullName.givenName;
+      $rootScope._data.title = $rootScope._data.user.displayName + ' | CaptureYou';
       $rootScope._data.appLoaded = true;
     });
 
